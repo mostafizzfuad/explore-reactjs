@@ -1,6 +1,6 @@
 // App.jsx
-import Status from "./Status";
+import UserList from "./UserList";
 
 export default function App() {
-	return <Status status="success" />;
+	return <UserList />;
 }
