@@ -1,0 +1,14 @@
+/* App.css */
+.active {
+	color: teal;
+	font-size: 30px;
+	text-align: center;
+}
+
+.inactive {
+	color: crimson;
+	font-size: 30px;
+	text-align: center;
+}
+
+
