@@ -1,12 +1,17 @@
 // App.jsx
-import withLogger from "./components/withLogger";
-import Hello from "./components/Hello";
-
-// HOC দিয়ে wrap করা
-const HelloWithLogger = withLogger(Hello);
+import Mouse from "./Mouse";
 
 export default function App() {
-	return <HelloWithLogger name="Mostafizur" />;
+	return (
+		<div>
+			<h2>Render Props Example</h2>
+			<Mouse
+				render={(pos) => (
+					<p>
+						Mouse Position: {pos.x}, {pos.y}
+					</p>
+				)}
+			/>
+		</div>
+	);
 }
-
-
