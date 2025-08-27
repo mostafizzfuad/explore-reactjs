@@ -1,20 +1,12 @@
 // App.jsx
-import React, { useState } from "react";
-import Tooltip from "./Tooltip";
+import withLogger from "./components/withLogger";
+import Hello from "./components/Hello";
 
-function App() {
-  const [show, setShow] = useState(false);
+// HOC দিয়ে wrap করা
+const HelloWithLogger = withLogger(Hello);
 
-  return (
-    <div>
-      <h1>Hover to See Tooltip</h1>
-      <button onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
-        Hover Me
-      </button>
-      {show && <Tooltip text="Hello, I'm a tooltip!" />}
-    </div>
-  );
+export default function App() {
+	return <HelloWithLogger name="Mostafizur" />;
 }
 
-export default App;
 
